@@ -2,7 +2,7 @@
   <div class="link row clearfix">
     <h2>
       <%= link_to link.title, link %><br>
-      <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %></small>
+      <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
     </h2>
 
     <div class="btn-group">
@@ -17,6 +17,7 @@
         Downvote
         <%= link.get_downvotes.size %>
       <% end %>
+      <a class="btn btn-default btn-sm" href="<%= link.url %>"><%= link.comments.count %> Comment(s)</a>
     </div>
   </div>
 <% end %>
