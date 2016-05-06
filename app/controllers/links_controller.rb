@@ -42,13 +42,15 @@ class LinksController < ApplicationController
   # PATCH/PUT /links/1
   # PATCH/PUT /links/1.json
   def update
+    @link = current_user.links.build(link_params)
+
     respond_to do |format|
       if @link.update(link_params)
         format.html { redirect_to @link, notice: 'Link was successfully updated.' }
-        format.json { render :show, status: :ok, location: @link }
+        format.js { render :show, status: :ok, location: @link }
       else
         format.html { render :edit }
-        format.json { render json: @link.errors, status: :unprocessable_entity }
+        format.js { render json: @link.errors, status: :unprocessable_entity }
       end
     end
   end
