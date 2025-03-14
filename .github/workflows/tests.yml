@@ -5,6 +5,7 @@ on:
     branch: "master"
 jobs:
   test:
+    name: Run Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
