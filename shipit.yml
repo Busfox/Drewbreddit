@@ -8,14 +8,10 @@ review:
     - Do you have the <a href="https://example.com/dash">monitoring dashboard</a> open,
   # Some monitoring graphs.
   monitoring:
-    # # Either as images.
-    # - image: "https://example.com/monitoring"
-    #   width: 360
-    #   height: 180
-    # # Or iframes.
-    # - iframe: "https://example.com/monitoring"
-    #   width: 360
-    #   height: 180
+    # Or iframes.
+    - iframe: "https://app.datadoghq.com/dashboard/5z4-6m5-d93/integration-dashboard"
+      width: 360
+      height: 180
 
 # The dependencies step if for installing your deploy script dependencies only.
 dependencies:
