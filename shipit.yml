@@ -4,18 +4,18 @@
 review:
   # A list of checkboxes.
   checklist:
-    - Did you notify X?
+    - Did you add the ?
     - Do you have the <a href="https://example.com/dash">monitoring dashboard</a> open,
   # Some monitoring graphs.
   monitoring:
-    # Either as images.
-    - image: "https://example.com/monitoring"
-      width: 360
-      height: 180
-    # Or iframes.
-    - iframe: "https://example.com/monitoring"
-      width: 360
-      height: 180
+    # # Either as images.
+    # - image: "https://example.com/monitoring"
+    #   width: 360
+    #   height: 180
+    # # Or iframes.
+    # - iframe: "https://example.com/monitoring"
+    #   width: 360
+    #   height: 180
 
 # The dependencies step if for installing your deploy script dependencies only.
 dependencies:
@@ -37,6 +37,10 @@ dependencies:
       - benchmark
       - debug
       - assets
+
+ci:
+  require:
+    rubocop
 
 # If this section is provided, shipit will execute that command every minute to verify
 # which revision is actually running in production. It's useful if you sometimes deploy manually.
